@@ -1,0 +1,29 @@
+<tr *ngIf="produkt">
+  <td>{{produkt.name}}</td>
+  <td >{{produkt.price}}</td>
+  <td >{{produkt.quantity}}</td>
+  <td >{{verfuebarkeit}}</td>
+
+  <td>
+    <button type="button"  class="btn btn-success" [routerLink]="['editProdukt', produkt.idProdukt]">
+      <span >Update</span>
+
+
+    </button>
+  </td>
+<!--
+  <td>
+    <button  class="btn btn-danger"  (click)="onDeleteProdukt(produkt.idProdukt)">
+      <span class="fa fa-trash-o">Löchen</span>
+    </button>
+
+  </td>-->
+  <td>
+    <button  class="btn btn-info"  [routerLink]="['details',produkt.idProdukt]">
+      <span class="fa fa-edit">Details</span>
+    </button>
+
+  </td>
+
+</tr>
+
